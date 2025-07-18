@@ -36,7 +36,7 @@ function Sidebar({ isOpen, onClose }) {
           <div className="collapse" id="submenuAdmin">
             <ul className="nav flex-column ms-3">
               <li><NavLink className="nav-link" to="/contratos" onClick={handleLinkClick}>Contratos</NavLink></li>
-              <li><a className="nav-link text-muted" href="#" onClick={handleLinkClick}>Empresas</a></li>
+              <li><NavLink className="nav-link" to="/empresas" onClick={handleLinkClick}>Empresas</NavLink></li>
             </ul>
           </div>
         </li>

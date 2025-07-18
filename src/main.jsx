@@ -19,6 +19,7 @@ import DashboardContratista from './pages/Dashboards/DashboardContratista.jsx';
 import HistoricoEDP from './pages/EDP/HistoricoEDP.jsx'; 
 import GestionUsuarios from './pages/Usuarios/GestionUsuarios.jsx';
 import DetalleContrato from './pages/Contratos/DetalleContrato.jsx'; 
+import RegistroEmpresas from './pages/Administracion/RegistroEmpresas.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,8 @@ const router = createBrowserRouter([
       { path: 'edp/historico', element: <HistoricoEDP /> },
       { path: 'usuarios', element: <GestionUsuarios /> },
       { path: 'contratos/:contractId', element: <DetalleContrato /> },
+      { path: 'empresas', element: <RegistroEmpresas /> },
+      
     ],
   },
   ],
