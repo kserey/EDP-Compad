@@ -3,10 +3,14 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main # Se activa solo cuando subes cambios a la rama 'main'
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # --- INICIO DE LA CORRECCIÓN ---
+    permissions:
+      contents: write
+    # --- FIN DE LA CORRECCIÓN ---
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
@@ -15,9 +19,9 @@ jobs:
         run: |
           npm install
           npm run build
-
+        
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # El directorio que Vite construye
+          publish_dir: ./dist
