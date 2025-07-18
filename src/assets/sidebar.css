@@ -1,0 +1,69 @@
+/* Sidebar fijo para pantallas grandes */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 190px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  z-index: 1040;
+  overflow-y: auto;
+  transform: translateX(0); /* Abierto por defecto */
+  transition: transform 0.3s ease;
+}
+
+/* Contenido principal alineado a la derecha del sidebar */
+.main-layout {
+  margin-left: 190px;
+  padding: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive: ocultar sidebar y expandir contenido */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-layout {
+    margin-left: 0;
+  }
+}
+
+/* Estilo de navegación */
+.sidebar-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar .nav-link {
+  color: #343a40;
+  padding: 0.5rem 1rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #0d6efd;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.sidebar .nav-link.active {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.sidebar .collapse .nav-link {
+  padding-left: 2rem;
+}
+
+
+@media (min-width: 769px) {
+  .navbar {
+    margin-left: 190px;
+  }
+}

@@ -1,21 +1,13 @@
 // src/components/Navbar.jsx
 import React from 'react';
 
-function Navbar() {
-  // Agregamos las clases para que la navbar se posicione correctamente
+function Navbar({ toggleSidebar }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top" style={{ marginLeft: '250px' }}>
-      <div className="container-fluid">
-        <span className="navbar-brand">Panel de Administración</span>
-        <div className="d-flex align-items-center ms-auto">
-          <button className="btn btn-light me-2" title="Notificaciones">
-              <i className="bi bi-bell"></i>
-          </button>
-          <button className="btn btn-light" title="Perfil">
-              <i className="bi bi-person-circle"></i>
-          </button>
-        </div>
-      </div>
+    <nav className="navbar navbar-expand-lg bg-light px-3">
+      <button className="btn btn-outline-secondary d-md-none me-3" onClick={toggleSidebar}>
+        <i className="bi bi-list"></i>
+      </button>
+      <span className="navbar-brand mb-0 h1">Gestión de Estados de Pago</span>
     </nav>
   );
 }
