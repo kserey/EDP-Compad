@@ -36,11 +36,12 @@ const router = createBrowserRouter([
       { path: 'usuarios', element: <GestionUsuarios /> },
       { path: 'contratos/:contractId', element: <DetalleContrato /> },
     ],
-    {
-    basename: "/EDP-Compad/",
-    }
   },
-]);
+  ],
+  {
+    basename: "/EDP-Compad/",
+  }
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
