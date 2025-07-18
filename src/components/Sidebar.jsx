@@ -13,7 +13,10 @@ function Sidebar({ isOpen, onClose }) {
 
   return (
     <nav className={`sidebar d-flex flex-column p-1 ${isOpen ? 'show' : ''}`}>
-      <h5 className="sidebar-title p-2">COMPAD</h5>
+      <NavLink to="/" className="sidebar-title p-2 text-decoration-none" onClick={handleLinkClick}>
+        <h5 className="mb-0">COMPAD</h5>
+      </NavLink>
+      
       <ul className="nav flex-column">
         {/* DASHBOARD */}
         <li className="nav-item">
@@ -22,7 +25,7 @@ function Sidebar({ isOpen, onClose }) {
           </a>
           <div className="collapse" id="submenuDashboard">
             <ul className="nav flex-column ms-3">
-              <li><NavLink className="nav-link" to="/" end onClick={handleLinkClick}>ADC Mandante</NavLink></li>
+              <li><NavLink className="nav-link" to="/dashboard-mandante" end onClick={handleLinkClick}>ADC Mandante</NavLink></li>
               <li><NavLink className="nav-link" to="/dashboard-contratista" onClick={handleLinkClick}>ADC Contratista</NavLink></li>
             </ul>
           </div>

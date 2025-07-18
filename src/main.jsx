@@ -10,6 +10,7 @@ import { ContratosProvider } from './context/ContratosContext.jsx';
 
 // Tus importaciones de páginas
 import App from './App.jsx';
+import Home from './pages/Home/Home.jsx';
 import Dashboard from './pages/Dashboards/Dashboard.jsx';
 import RegistroContratos from './pages/Contratos/RegistroContratos.jsx';
 import RevisionEDP from './pages/EDP/RevisionEDP.jsx';
@@ -27,11 +28,12 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Dashboard /> },
+      { index: true, element: <Home /> },
       { path: 'contratos', element: <RegistroContratos /> },
       { path: 'edp/revision', element: <RevisionEDP /> },
       { path: 'edp/nuevo', element: <NuevoEDP /> },
       { path: 'edp/detalle/:edpId', element: <DetalleEDP /> },
+      { path: 'dashboard-mandante', element: <Dashboard /> },
       { path: 'dashboard-contratista', element: <DashboardContratista /> },
       { path: 'edp/historico', element: <HistoricoEDP /> },
       { path: 'usuarios', element: <GestionUsuarios /> },
