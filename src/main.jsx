@@ -36,6 +36,9 @@ const router = createBrowserRouter([
       { path: 'usuarios', element: <GestionUsuarios /> },
       { path: 'contratos/:contractId', element: <DetalleContrato /> },
     ],
+    {
+    basename: "/EDP-Compad/",
+    }
   },
 ]);
 
