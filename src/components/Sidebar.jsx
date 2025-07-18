@@ -1,7 +1,7 @@
 // src/components/Sidebar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../assets/Sidebar.css';
+import '../assets/sidebar.css';
 
 function Sidebar({ isOpen, onClose }) {
   // Función para cerrar el sidebar si estamos en móvil
