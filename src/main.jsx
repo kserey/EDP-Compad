@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   },
   ],
   {
-    basename: "/EDP-Compad/",
+    basename: "/",
   }
 );
 
